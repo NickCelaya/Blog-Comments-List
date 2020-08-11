@@ -1,27 +1,23 @@
 import React from "react";
-import logo from "./logo.svg";
-import Hello from "./components/Hello";
+// import logo from "./logo.svg";
+// import Hello from "./components/Hello";
 import "./App.css";
 
-function App() {
+const App = () => {
+	const buttonText = "Click me";
+	const labelText = "Enter Name:";
+
 	return (
 		<div className='App'>
-			<header className='App-header'>
-				<img src={logo} className='App-logo' alt='logo' />
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className='App-link'
-					href='https://reactjs.org'
-					target='_blank'
-					rel='noopener noreferrer'>
-					Learn React
-				</a>
-				<Hello />
-			</header>
+			<label className='label' htmlFor='name'>
+				{labelText}
+			</label>
+			<input id='name' type='text' />
+			<button style={{ backgroundColor: "blue", color: "white" }}>
+				{buttonText}
+			</button>
 		</div>
 	);
-}
+};
 
 export default App;
